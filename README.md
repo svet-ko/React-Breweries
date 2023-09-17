@@ -1,24 +1,26 @@
-# Breweries App
+An Integrify Academy exercise for the Frontend module. The goal was to create a React/Typescript app that would fetch, display, and search for brewery data from an [API endpoint](https://www.openbrewerydb.org/documentation).
 
-Fetch, display, and search for brewery companies from the given API endpoint, using React and TypeScript
+## Technologies
+- React
+- Typescript
+- MaterialUI
 
-## Requirements
+## Features
+- Fetching data from [https://www.openbrewerydb.org/documentation](https://www.openbrewerydb.org/documentation)
+- Displaying all data
+- Search company by name
+- Company detail page
+- React Router
+- Styling with MaterialUI
+- README.md
+- Deployment with GitHub Pages
 
-1. Check the documentation at [https://www.openbrewerydb.org/documentation](https://www.openbrewerydb.org/documentation) Fetch and display information of all the companies.
+## Running the code
 
-2. Have proper display and routing that user can switch to/back from specific company's detailed page
+### Requirements
+- Node
 
-3. Create search component to enable user to input text and search for companies by name.
+### Steps
+1. After cloning the project, run ```npm install```
+2. Run ```npm start``````
 
-4. Use MaterialUI to make your design more appealing and responsive
-
-5. Deploy your application and rewrite README file
-
-## Optional
-
-6. Implement performance optimization where applicable
-7. Use the queries listed in the documentation to sort and limit the returned data and build pagination feature.
-
-8. Create a contact form so that user can send question along with their contact information.
-
-9. Use Google-login option to pre-fill the contact form for user (no need to send form data anywhere, just need to fill the form. Submit button can just alert user of successful submission).
