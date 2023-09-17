@@ -14,11 +14,16 @@ type BreweriesListItemProps = {
 
 const BreweryListItem = (props: BreweriesListItemProps) => {
   return (
-    <Card>
+    <Card sx={{ 
+      display: "flex", 
+      flexDirection: "column",
+      justifyContent: "space-between",
+      width: "30%",
+      minHeight: "10em",
+      marginRight: 2,
+      marginBottom: 2
+    }}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-
-        </Typography>
         <Typography variant="h5" component="div">
           {props.brewery.name}
         </Typography>
@@ -27,7 +32,9 @@ const BreweryListItem = (props: BreweriesListItemProps) => {
         </Typography>
       </CardContent>
       <CardActions>
-      <Button variant="contained" size="small"><Link to={props.brewery.id}>Read more</Link></Button>
+        <Button variant="contained" size="small" component={Link} to={props.brewery.id}>
+          Read more
+        </Button>
       </CardActions>
     </Card>
   )

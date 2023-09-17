@@ -1,10 +1,12 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import axios, {AxiosResponse, AxiosError} from 'axios';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import { Box, CircularProgress, Container, TextField, Typography } from '@mui/material';
 
 import {Brewery} from './types';
 import BreweriesList from './BreweriesList';
+import LoadBox from './LoadBox';
 
 const Home = () => {
 
@@ -37,7 +39,7 @@ const Home = () => {
       console.log(error.message);
       setError(error.message)
     }
-    setLoading(false)
+    setInterval(() => setLoading(false), 500);
   }
 
   return (
@@ -47,16 +49,28 @@ const Home = () => {
       )}
 
       {!error && loading && (
-        <p>Wait</p>
+        <LoadBox />
       )}
 
       {filteredBreweries && !error && !loading && (
-        <div>
-          <input type="text" value={filter} onChange={(e) => setFilter(e.currentTarget.value)}/>
+        <Container sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center"
+        }}>
+          <TextField 
+            sx={{
+              marginTop: "1em",
+              marginBottom: "1.3em"
+            }}
+            id="outlined-basic"
+            label="Search by name:"
+            variant="outlined"
+            onChange={(e) => setFilter(e.currentTarget.value)}/>
           <BreweriesList breweries={filteredBreweries} />
-        </div>
+        </Container>
       )}
-      
+
       <Outlet />
     </div>
   )
