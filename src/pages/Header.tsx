@@ -11,7 +11,7 @@ export const Header = () => {
           display: "flex",
           alignItems: "center"
         }}>
-          <Typography variant="h3">Breweries </Typography>
+          <Typography variant="h4">BREWERIES </Typography>
           <Icon component={SportsBarIcon} fontSize="large"/>
         </Box>
         <ButtonGroup variant="contained">

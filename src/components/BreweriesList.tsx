@@ -1,10 +1,7 @@
-
-
-import {Brewery} from './types';
+import {Brewery} from '../types/types';
 import BreweryListItem from './BreweryListItem';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { wrap } from 'module';
 
 type BreweriesListProps = {
   breweries: Brewery[];

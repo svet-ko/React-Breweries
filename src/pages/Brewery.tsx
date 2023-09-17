@@ -4,13 +4,14 @@ import axios, {AxiosResponse, AxiosError} from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Box, Button, Container, Typography } from '@mui/material';
 
-import { Brewery } from './types';
-import LoadBox from './LoadBox';
+import { Brewery } from '../types/types';
+import LoadBox from '../components/LoadBox';
+import ErrorPage from './ErrorPage';
 
 const SingleBrewery = () => {
   const [item, setItem] = useState<Brewery>();
   const [error, setError] = useState<string>('');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const params = useParams<string>();
   const breweryId: string | undefined = params.breweryID;
 
@@ -25,7 +26,6 @@ const SingleBrewery = () => {
       setItem(response.data);
     } catch (err) {
       const error = err as AxiosError;
-      console.log(error.message);
       setError(error.message)
     }
     setInterval(() => setLoading(false), 500);
@@ -57,7 +57,7 @@ const SingleBrewery = () => {
       }}
     >
       {error && !loading && (
-        <p>Error happens</p>
+        <ErrorPage message={error} />
       )}
 
       {!error && loading && (

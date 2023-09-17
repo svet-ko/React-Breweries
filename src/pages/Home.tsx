@@ -4,12 +4,12 @@ import axios, {AxiosResponse, AxiosError} from 'axios';
 import { Outlet } from 'react-router-dom';
 import { Container, TextField } from '@mui/material';
 
-import {Brewery} from './types';
-import BreweriesList from './BreweriesList';
-import LoadBox from './LoadBox';
+import {Brewery} from '../types/types';
+import BreweriesList from '../components/BreweriesList';
+import LoadBox from '../components/LoadBox';
+import ErrorPage from './ErrorPage';
 
 const Home = () => {
-
   const [breweries, setBreweries] = useState<Brewery[]>();
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState(false);
@@ -36,7 +36,6 @@ const Home = () => {
       setFilteredBreweries(response.data);
     } catch (err) {
       const error = err as AxiosError;
-      console.log(error.message);
       setError(error.message)
     }
     setInterval(() => setLoading(false), 500);
@@ -45,7 +44,7 @@ const Home = () => {
   return (
     <div>
       {error && !loading && (
-        <p>Error happens</p>
+        <ErrorPage message={error} />
       )}
 
       {!error && loading && (
@@ -70,7 +69,6 @@ const Home = () => {
           <BreweriesList breweries={filteredBreweries} />
         </Container>
       )}
-
       <Outlet />
     </div>
   )

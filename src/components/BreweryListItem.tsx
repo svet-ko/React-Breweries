@@ -6,7 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import {Brewery} from './types';
+import {Brewery} from '../types/types';
 
 type BreweriesListItemProps = {
   brewery: Brewery;
