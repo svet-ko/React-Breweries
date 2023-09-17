@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import axios, {AxiosResponse, AxiosError} from 'axios';
 import { Outlet } from 'react-router-dom';
-import { Box, CircularProgress, Container, TextField, Typography } from '@mui/material';
+import { Container, TextField } from '@mui/material';
 
 import {Brewery} from './types';
 import BreweriesList from './BreweriesList';

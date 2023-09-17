@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import Home from "./Home";
 import SingleBrewery from "./Brewery";
 import Root from "./Root";
+import About from "./About";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -17,9 +18,13 @@ const App = () => {
           element: <Home />,
         },
         {
+          path: "about",
+          element: <About />
+        },
+        {
           path: ":breweryID",
           element: <SingleBrewery />
-        }
+        },
       ]
     }
   ]);
