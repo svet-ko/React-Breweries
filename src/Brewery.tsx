@@ -13,9 +13,8 @@ const SingleBrewery = () => {
     }
 
     const [item, setItem] = useState<Brewery>();
-    const [error, setError] = useState('')
-    const params = useParams();
-    console.log(params);
+    const [error, setError] = useState<string>('')
+    const params = useParams<string>();
     const breweryId: string | undefined = params.breweryID;
 
     useEffect(() => {
