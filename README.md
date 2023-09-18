@@ -25,5 +25,5 @@ An Integrify Academy exercise for the Frontend module. The goal was to create a 
 2. Run ```npm start```
 
 ### Link
-Link to Github Pages: [https://svet-ko.github.io/React-Breweries/](https://svet-ko.github.io/React-Breweries/)
+Link to Github Pages: [https://main--courageous-daifuku-348bf1.netlify.app/](https://main--courageous-daifuku-348bf1.netlify.app/)
 
