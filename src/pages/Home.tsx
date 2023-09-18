@@ -8,6 +8,7 @@ import {Brewery} from '../types/types';
 import BreweriesList from '../components/BreweriesList';
 import LoadBox from '../components/LoadBox';
 import ErrorPage from './ErrorPage';
+import useDebounce from '../hooks/useDebounce';
 
 const Home = () => {
   const [breweries, setBreweries] = useState<Brewery[]>();
@@ -42,12 +43,14 @@ const Home = () => {
     setLoading(false);
   }
 
-  useEffect(() => {
+  /*useEffect(() => {
     const timeoutId = setTimeout(() => {
         setDebouncedFilter(filter);
     }, 500);
     return () => clearTimeout(timeoutId);
-  }, [filter]);
+  }, [filter]);*/
+
+  useDebounce(() => setDebouncedFilter(filter), filter);
 
   return (
     <div>
