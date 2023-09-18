@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/React-Breweries/static/css/main.e6c13ad2.css",
-    "main.js": "/React-Breweries/static/js/main.0b3c6c25.js",
-    "static/js/787.649227b4.chunk.js": "/React-Breweries/static/js/787.649227b4.chunk.js",
-    "index.html": "/React-Breweries/index.html",
-    "main.e6c13ad2.css.map": "/React-Breweries/static/css/main.e6c13ad2.css.map",
-    "main.0b3c6c25.js.map": "/React-Breweries/static/js/main.0b3c6c25.js.map",
-    "787.649227b4.chunk.js.map": "/React-Breweries/static/js/787.649227b4.chunk.js.map"
+    "main.css": "/fs16_5-React-Breweries/static/css/main.e6c13ad2.css",
+    "main.js": "/fs16_5-React-Breweries/static/js/main.cb95763f.js",
+    "static/js/787.649227b4.chunk.js": "/fs16_5-React-Breweries/static/js/787.649227b4.chunk.js",
+    "index.html": "/fs16_5-React-Breweries/index.html",
+    "main.e6c13ad2.css.map": "/fs16_5-React-Breweries/static/css/main.e6c13ad2.css.map",
+    "main.cb95763f.js.map": "/fs16_5-React-Breweries/static/js/main.cb95763f.js.map",
+    "787.649227b4.chunk.js.map": "/fs16_5-React-Breweries/static/js/787.649227b4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.0b3c6c25.js"
+    "static/js/main.cb95763f.js"
   ]
 }
