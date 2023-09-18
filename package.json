@@ -1,7 +1,7 @@
 {
   "name": "breweries",
   "version": "0.1.0",
-  "homepage": "https://svet-ko.github.io/fs16_5-React-Breweries/",
+  "homepage": "https://svet-ko.github.io/React-Breweries/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -32,7 +32,7 @@
     "eject": "react-scripts eject",
     "compile": "sass src/sass/index.scss:src/index.css",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -d build --remote public"
   },
   "eslintConfig": {
     "extends": [
