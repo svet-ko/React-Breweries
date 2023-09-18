@@ -1,6 +1,7 @@
 {
   "name": "breweries",
   "version": "0.1.0",
+  "homepage": "https://svet-ko.github.io/fs16_5-React-Breweries/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -15,6 +16,7 @@
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
     "axios": "^1.5.0",
+    "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
@@ -28,7 +30,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "compile": "sass src/sass/index.scss:src/index.css"
+    "compile": "sass src/sass/index.scss:src/index.css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": [

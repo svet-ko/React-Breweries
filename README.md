@@ -22,5 +22,8 @@ An Integrify Academy exercise for the Frontend module. The goal was to create a 
 
 ### Steps
 1. After cloning the project, run ```npm install```
-2. Run ```npm start``````
+2. Run ```npm start```
+
+### Link
+Link to Github Pages: [https://svet-ko.github.io/React-Breweries/](https://svet-ko.github.io/React-Breweries/)
 
