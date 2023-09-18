@@ -14,6 +14,7 @@ const Home = () => {
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [filter, setFilter] = useState<string>('');
+  const [debouncedFilter, setDebouncedFilter] = useState<string>();
   const [filteredBreweries, setFilteredBreweries] = useState<Brewery[]>();
 
   useEffect(() => {
@@ -26,7 +27,7 @@ const Home = () => {
         return item.name.toLowerCase().includes(filter.toLowerCase())
       }));
     }
-  },[filter])
+  },[debouncedFilter])
 
   const getBreweries = async () => {
     setLoading(true)
@@ -38,8 +39,15 @@ const Home = () => {
       const error = err as AxiosError;
       setError(error.message)
     }
-    setInterval(() => setLoading(false), 500);
+    setLoading(false);
   }
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+        setDebouncedFilter(filter);
+    }, 500);
+    return () => clearTimeout(timeoutId);
+  }, [filter]);
 
   return (
     <div>
